@@ -4,8 +4,10 @@ import MainNavigation from "../components/MainNavigation"
 export default function Root() {
     return (
         <>
-            <MainNavigation />   
-            <Outlet /> 
+            <MainNavigation />  
+            <main>
+                <Outlet />         
+            </main> 
         </>
 
     )
