@@ -1,3 +1,9 @@
+import PageContent from "../components/PageContent"
+
 export default function ErrorPage() {
-    return <h1>Could not fetch data</h1>
+    return (
+        <PageContent title='An error occured'>
+            <p>Something went wrong</p>
+        </PageContent>
+    )
 }
