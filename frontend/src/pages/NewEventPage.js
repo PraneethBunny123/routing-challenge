@@ -1,4 +1,4 @@
-import { json } from "react-router-dom";
+import { json, redirect } from "react-router-dom";
 import EventForm from "../components/EventForm";
 
 export default function NewEventPage() {
@@ -28,4 +28,6 @@ export async function action({request, params}) {
     if(!response.ok) {
         throw json({message: 'could not save data'}, {status: 500})
     }
+
+    return redirect('/events')
 }
