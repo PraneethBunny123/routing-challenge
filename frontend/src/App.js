@@ -24,10 +24,11 @@ import Root from "./pages/Root";
 import HomePage from "./pages/HomePage";
 import EventsPage, {loader as loaderFunction} from "./pages/EventsPage";
 import EventDetailPage, {loader as eventDetailLoader, action as eventDeleteAction} from "./pages/EventDetailPage";
-import NewEventPage, {action as newEventAction} from './pages/NewEventPage'
+import NewEventPage from './pages/NewEventPage'
 import EditEventPage from "./pages/EditEventPage";
 import EventLayout from "./pages/EventLayout";
 import ErrorPage from "./pages/ErrorPage";
+import { action as manipulateEventAction } from "./components/EventForm";
 
 
 const router = createBrowserRouter([
