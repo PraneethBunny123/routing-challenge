@@ -70,7 +70,7 @@ export async function action({request, params}) {
     }
 
     const response = await fetch(url, {
-        method: {method},
+        method: method,
         headers: {
             'Content-Type': 'application/json'
         },
