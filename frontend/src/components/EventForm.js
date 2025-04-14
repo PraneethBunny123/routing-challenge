@@ -62,7 +62,14 @@ export async function action({request, params}) {
         description: data.get('description')
     }
 
-    const response = await fetch('http://localhost:8080/events', {
+    let url = 'http://localhost:8080/events'
+
+    if(method === 'patch') {
+      const id = params.id
+      url = 'http://localhost:8080/events/' + id 
+    }
+
+    const response = await fetch(url, {
         method: {method},
         headers: {
             'Content-Type': 'application/json'
